@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "networksampler"
+version = "0.9.0"
+authors = [
+  { name="Emiliano del Gobbo", email="emidelgo@gmail.com" },
+]
+description = "Python package for sampling networks"
+readme = "README.md"
+license = "LGPL-3.0-only"
+requires-python = ">=3.10"
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+]
+dependencies = [
+  'numpy >= 1.22',
+  'networkx >= 2.8.0'
+]
+
+[project.urls]
+"Homepage" = "https://edgresearch.github.com/pylib_networksampler"
+"Download" = "https://edgresearch.github.com/pypi/networksampler"
+"Documentation" = "https://edgresearch.github.com/pylib_networksampler"
+"Source Code" = "https://github.com/edgresearch/pylib_networksampler"
+"Bug Tracker" = "https://github.com/edgresearch/pylib_networksampler/issues"
+"License" = "https://edgresearch.github.io/pylib_networksampler/license.html"

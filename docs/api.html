@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Reference &mdash; NetworkSampler 0.9.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=39bb1c6d"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to cite this package?" href="howtocite.html" />
+    <link rel="prev" title="NetworkSampler: smart networks sampling" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NetworkSampler
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">NetworkSampler: smart networks sampling</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#networksampler.compute_shortest_length_paths_matrix"><code class="docutils literal notranslate"><span class="pre">compute_shortest_length_paths_matrix()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#networksampler.generate_random_network"><code class="docutils literal notranslate"><span class="pre">generate_random_network()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#networksampler.node_random_sample"><code class="docutils literal notranslate"><span class="pre">node_random_sample()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#networksampler.sa_sampling"><code class="docutils literal notranslate"><span class="pre">sa_sampling()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#networksampler.sa_sampling_twophases"><code class="docutils literal notranslate"><span class="pre">sa_sampling_twophases()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#networksampler.utils.nodes_centrality_measures"><code class="docutils literal notranslate"><span class="pre">nodes_centrality_measures()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="howtocite.html">How to cite this package?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NetworkSampler</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-networksampler">
+<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-networksampler" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="networksampler.compute_shortest_length_paths_matrix">
+<span class="sig-prename descclassname"><span class="pre">networksampler.</span></span><span class="sig-name descname"><span class="pre">compute_shortest_length_paths_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networksampler.compute_shortest_length_paths_matrix" title="Link to this definition"></a></dt>
+<dd><p>Compute the shortest length path matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>A</strong> (<em>numpy.ndarray</em>) – The graph adjacency matrix</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The shortest length path matrix, 2D array containing data with <cite>int</cite> type.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.array(dtype=int)</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Here we use the function to generate the matrix, from <cite>A</cite> adjacency matrix:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">networksampler</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">D</span> <span class="o">=</span> <span class="n">networksampler</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">compute_shortest_length_paths_matrix</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">D</span>
+<span class="go">array([ 0.30220482,  0.86820401,  0.1654503 ,  0.11659149,  0.54323428]) # random</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networksampler.generate_random_network">
+<span class="sig-prename descclassname"><span class="pre">networksampler.</span></span><span class="sig-name descname"><span class="pre">generate_random_network</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networksampler.generate_random_network" title="Link to this definition"></a></dt>
+<dd><p>Generate a random network with unweighted and undirected edges. The main purpose of this function is as test tool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nodes_num</strong> (<em>int</em>) – Number of nodes in the network</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Adjacency matrix</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(numpy.ndarray)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networksampler.node_random_sample">
+<span class="sig-prename descclassname"><span class="pre">networksampler.</span></span><span class="sig-name descname"><span class="pre">node_random_sample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'degree'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networksampler.node_random_sample" title="Link to this definition"></a></dt>
+<dd><p>This function extracts from an adjacency matrix a list of k nodes based on the centrality measure selected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<em>numpy.ndarray</em>) – The graph adjacency matrix</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – The size of the sample to extract</p></li>
+<li><p><strong>measure</strong> (<em>{&quot;degree&quot;</em><em>, </em><em>&quot;closeness&quot;</em><em>, </em><em>&quot;eigenvector&quot;</em><em>, </em><em>&quot;betweeness&quot;}</em><em>, </em><em>optional</em>) – The centrality measure to use</p></li>
+<li><p><strong>random_seed</strong> (<em>{None</em><em>, </em><em>int</em><em>, </em><em>array_like</em><em>[</em><em>ints</em><em>]</em><em>, </em><em>SeedSequence</em><em>, </em><em>BitGenerator</em><em>, </em><em>Generator}</em><em>, </em><em>optional</em>) – This argument is supposed to be used for output reproducibility.
+A seed to initialize the <cite>BitGenerator</cite>. If None, then fresh,
+unpredictable entropy will be pulled from the OS. If an <code class="docutils literal notranslate"><span class="pre">int</span></code> or
+<code class="docutils literal notranslate"><span class="pre">array_like[ints]</span></code> is passed, then it will be passed to
+<cite>SeedSequence</cite> to derive the initial <cite>BitGenerator</cite> state. One may also
+pass in a <cite>SeedSequence</cite> instance.
+Additionally, when passed a <cite>BitGenerator</cite>, it will be wrapped by
+<cite>Generator</cite>. If passed a <cite>Generator</cite>, it will be returned unaltered.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The index array of the sampled nodes</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.array(dtype=int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networksampler.sa_sampling">
+<span class="sig-prename descclassname"><span class="pre">networksampler.</span></span><span class="sig-name descname"><span class="pre">sa_sampling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networksampler.sa_sampling" title="Link to this definition"></a></dt>
+<dd><p>This function a simulated annealing algorithm to extract a node sample, minimizing the geodesi distance and maximizing the network coverage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<em>numpy.ndarray</em>) – The graph adjacency matrix. The graph must be unweighted (all the edges must be 1), undirected
+(the matrix must be symmetrical) and fully connected (a path from each node to each other node must exists).
+For networks larger than 5000 nodes, this process could be really slow. In case of larger networks, evaluate
+the usage of <cite>sa_sampling_twophases</cite>.</p></li>
+<li><p><strong>ns</strong> (<em>int</em>) – The size of the sample to extract.</p></li>
+<li><p><strong>p</strong> (<em>int</em><em>, </em><em>optional</em>) – The parameter p</p></li>
+<li><p><strong>q</strong> (<em>int</em><em>, </em><em>optional</em>) – The parameter q</p></li>
+<li><p><strong>r</strong> (<em>float</em><em>, </em><em>optional</em>) – The decay rate</p></li>
+<li><p><strong>D</strong> (<em>{None</em><em>, </em><em>numpy.ndarray}</em><em>, </em><em>optional</em>) – A precomputed shortest path length matrix.
+Generating this matrix requires finding all the shortest path between each nodes couple,
+and could be a slow operation for large Adjacency matrix. With this parameter you can provide
+a cached matrix</p></li>
+<li><p><strong>random_seed</strong> (<em>{None</em><em>, </em><em>int</em><em>, </em><em>array_like</em><em>[</em><em>ints</em><em>]</em><em>, </em><em>SeedSequence</em><em>, </em><em>BitGenerator</em><em>, </em><em>Generator}</em><em>, </em><em>optional</em>) – This argument is supposed to be used for output reproducibility.
+A seed to initialize the <cite>BitGenerator</cite>. If None, then fresh,
+unpredictable entropy will be pulled from the OS. If an <code class="docutils literal notranslate"><span class="pre">int</span></code> or
+<code class="docutils literal notranslate"><span class="pre">array_like[ints]</span></code> is passed, then it will be passed to
+<cite>SeedSequence</cite> to derive the initial <cite>BitGenerator</cite> state. One may also
+pass in a <cite>SeedSequence</cite> instance.
+Additionally, when passed a <cite>BitGenerator</cite>, it will be wrapped by
+<cite>Generator</cite>. If passed a <cite>Generator</cite>, it will be returned unaltered.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The index array of the sampled nodes</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(numpy.array(dtype=int), int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networksampler.sa_sampling_twophases">
+<span class="sig-prename descclassname"><span class="pre">networksampler.</span></span><span class="sig-name descname"><span class="pre">sa_sampling_twophases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centrality_measure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'betweenness'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_phase_sample_fraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networksampler.sa_sampling_twophases" title="Link to this definition"></a></dt>
+<dd><p>This function a simulated annealing algorithm to extract a node sample, minimizing the geodesi distance and maximizing the network coverage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<em>numpy.ndarray</em>) – The graph adjacency matrix. The graph must be unweighted (all the edges must be 1), undirected
+(the matrix must be symmetrical) and fully connected (a path from each node to each other node must exists)</p></li>
+<li><p><strong>ns</strong> (<em>int</em>) – The size of the sample to extract</p></li>
+<li><p><strong>p</strong> (<em>int</em><em>, </em><em>optional</em>) – The parameter p</p></li>
+<li><p><strong>q</strong> (<em>int</em><em>, </em><em>optional</em>) – The parameter q</p></li>
+<li><p><strong>r</strong> (<em>float</em><em>, </em><em>optional</em>) – The decay rate</p></li>
+<li><p><strong>centrality_measure</strong> (<em>{&quot;degree&quot;</em><em>, </em><em>&quot;closeness&quot;</em><em>, </em><em>&quot;eigenvector&quot;</em><em>, </em><em>&quot;betweeness&quot;}</em><em>, </em><em>optional</em>) – The centrality measure to use for the first phase node extraction</p></li>
+<li><p><strong>ns_firstphase</strong> (<em>float</em><em>, </em><em>optional</em>) – The number of nodes to sample in the first phase, before applying the
+simulated annealing sampling in the second phase.</p></li>
+<li><p><strong>D</strong> (<em>{None</em><em>, </em><em>numpy.ndarray}</em><em>, </em><em>optional</em>) – A precomputed shortest path length matrix.
+Generating this matrix requires finding all the shortest path between each nodes couple,
+and could be a slow operation for large Adjacency matrix. With this parameter you can provide
+a cached matrix</p></li>
+<li><p><strong>random_seed</strong> (<em>{None</em><em>, </em><em>int</em><em>, </em><em>array_like</em><em>[</em><em>ints</em><em>]</em><em>, </em><em>SeedSequence</em><em>, </em><em>BitGenerator</em><em>, </em><em>Generator}</em><em>, </em><em>optional</em>) – This argument is supposed to be used for output reproducibility.
+A seed to initialize the <cite>BitGenerator</cite>. If None, then fresh,
+unpredictable entropy will be pulled from the OS. If an <code class="docutils literal notranslate"><span class="pre">int</span></code> or
+<code class="docutils literal notranslate"><span class="pre">array_like[ints]</span></code> is passed, then it will be passed to
+<cite>SeedSequence</cite> to derive the initial <cite>BitGenerator</cite> state. One may also
+pass in a <cite>SeedSequence</cite> instance.
+Additionally, when passed a <cite>BitGenerator</cite>, it will be wrapped by
+<cite>Generator</cite>. If passed a <cite>Generator</cite>, it will be returned unaltered.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The index array of the sampled nodes</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(numpy.array(dtype=int), int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-networksampler.utils">
+<dt class="sig sig-object py" id="networksampler.utils.nodes_centrality_measures">
+<span class="sig-prename descclassname"><span class="pre">networksampler.utils.</span></span><span class="sig-name descname"><span class="pre">nodes_centrality_measures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networksampler.utils.nodes_centrality_measures" title="Link to this definition"></a></dt>
+<dd><p>This function extracts from an adjacency matrix dictionaries of several centrality measures: “degree”, “closeness”, “eigenvector”, “betweeness”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>A</strong> (<em>numpy.ndarray</em>) – The graph adjacency matrix</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple of dictionaries matching in order: “degree”, “closeness”, “eigenvector”, “betweeness”.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(dictionary, dictionary, dictionary, dictionary,)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="NetworkSampler: smart networks sampling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="howtocite.html" class="btn btn-neutral float-right" title="How to cite this package?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021-2026, Emiliano del Gobbo, Lara Fontanella, Luigi Ippoliti, Simone Di Zio, Sara Fontanella, Alex Cucco.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
