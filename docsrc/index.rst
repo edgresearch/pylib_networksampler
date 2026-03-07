@@ -1,4 +1,4 @@
-.. image:: https://img.shields.io/badge/pypi-0.9.1-blue
+.. image:: https://img.shields.io/pypi/v/networksampler?color=blue
   :target: https://pypi.org/project/networksampler/
 
 .. image:: https://img.shields.io/badge/License-LGPL%20v3-blue
@@ -7,8 +7,9 @@
 .. image:: https://img.shields.io/badge/DOI-10.1007/s11634--026--00670--z-green
    :target: https://doi.org/10.1007/s11634-026-00670-z
 
-.. image:: https://img.shields.io/github/stars/edgresearch/pylib_networksampler
-   :alt: GitHub Repo stars
+.. image:: https://img.shields.io/badge/GitHub-edgresearch/pylib__networksampler-181717?logo=github
+   :target: https://github.com/edgresearch/pylib_networksampler
+   :alt: GitHub
 
 .. image:: ../artworks/logo_bicolorvector.svg
   :alt: NetworkSampler

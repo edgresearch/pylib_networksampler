@@ -5,7 +5,7 @@
 </picture>
 
 --------------------------------------
-[![PyPI Version](https://img.shields.io/badge/pypi-0.9.1-blue)](https://pypi.org/project/networksampler/) 
+[![PyPI Version](https://img.shields.io/pypi/v/networksampler?color=blue)](https://pypi.org/project/networksampler/) 
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue)](https://github.com/edgresearch/pylib_networksampler/blob/master/LICENSE) 
 [![DOI](https://img.shields.io/badge/DOI-10.1007/s11634--026--00670--z-green)](https://doi.org/10.1007/s11634-026-00670-z)
 [![GitHub](https://img.shields.io/badge/GitHub-edgresearch/pylib__networksampler-181717?logo=github)](https://github.com/edgresearch/pylib_networksampler)

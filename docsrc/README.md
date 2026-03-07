@@ -2,33 +2,21 @@
 
 This folder contains the Sphinx source files for the NetworkSampler documentation.
 
-## Requirements
+## Deployment
 
-Install the documentation dependencies:
+Documentation is deployed automatically via GitHub Actions. Every push to `master` that modifies files in `docsrc/` or `networksampler/` triggers a build and deploy to GitHub Pages.
+
+No manual deployment is needed.
+
+## Local preview
+
+To preview the documentation locally, install the dependencies:
 
 ```bash
 pip install sphinx sphinx-rtd-theme
 ```
 
-## Build for GitHub Pages
-
-To generate the HTML documentation and copy it to the `../docs` folder (ready for GitHub Pages):
-
-**Windows:**
-```bash
-.\make.bat github
-```
-
-**Linux / macOS:**
-```bash
-make github
-```
-
-The generated files will be placed in `../docs`.
-
-## Build HTML only
-
-To generate the HTML locally without copying to `../docs`:
+Then build the HTML:
 
 **Windows:**
 ```bash
@@ -40,7 +28,7 @@ To generate the HTML locally without copying to `../docs`:
 make html
 ```
 
-The output will be in `_build/html`.
+The output will be in `_build/html`. Open `_build/html/index.html` in your browser.
 
 ## Clean
 
