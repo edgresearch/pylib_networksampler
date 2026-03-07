@@ -34,27 +34,38 @@ For more details check the publication:
 - **Bug reports:** https://github.com/edgresearch/pylib_networksampler/issues
 - **Pip Package:** https://pypi.org/project/networksampler
 
+## Tutorials
+
+A comprehensive tutorial is available in the [official documentation](https://edgresearch.github.io/pylib_networksampler/tutorial.html). 
+
+If you prefer a hands-on approach, you can find a complete Jupyter Notebook illustrating the library's features step-by-step directly in the repository. You can open and run it directly in your browser using Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/edgresearch/pylib_networksampler/blob/master/notebooks/basic_tutorial.ipynb)
+
+- Or view the source file here: [notebooks/basic_tutorial.ipynb](https://github.com/edgresearch/pylib_networksampler/blob/master/notebooks/basic_tutorial.ipynb)
 ## Simple example
 
 Extract a sample that maximizes the coverage of a network:
 
 ```python
+import networksampler
+import networkx as nx
 
-    import networksampler
-    import networkx as nx
-    
-    # Generate an adjacency matrix of 1000 nodes full connected
-    G = nx.gaussian_random_partition_graph(1000, 500, 100, 0.20, 0.1)
-    A = nx.adjacency_matrix(G).todense()
+# Generate an adjacency matrix of 1000 nodes full connected
+G = nx.gaussian_random_partition_graph(1000, 500, 100, 0.20, 0.1)
+A = nx.adjacency_matrix(G).todense()
 
-    # Extract the sample: 
-    # nodes number = 10
-    # p = -4 and q = 4
-    # r = 0.1
-    networksampler.sa_sampling(A, 10, -4, 4, 0.1)
-    (array([ 14,  135, 213, 256, 345, 560, 678, 690, 900, 967]),
-     7.727146854012883)
+# Extract the sample:
+# nodes number = 10
+# p = -4 and q = 4
+# r = 0.1
+result = networksampler.sa_sampling(A, 10, -4, 4, 0.1)
+print(result)
+# (array([ 14,  135, 213, 256, 345, 560, 678, 690, 900, 967]),
+# np.float64(7.727146854012883))
 ```
+
+
 
 ## Install
 

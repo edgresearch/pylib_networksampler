@@ -42,6 +42,19 @@ For more details check the publication:
 - **Bug reports:** https://github.com/edgresearch/pylib_networksampler/issues
 - **Pip Package:** https://pypi.org/project/networksampler
 
+Tutorials
+--------------
+
+A comprehensive tutorial is available in the [official documentation](https://edgresearch.github.io/pylib_networksampler/tutorial.html).
+
+If you prefer a hands-on approach, you can find a complete Jupyter Notebook illustrating the library's features step-by-step directly in the repository. You can open and run it directly in your browser using Google Colab:
+
+.. image:: https://colab.research.google.com/assets/colab-badge.svg
+   :target: https://colab.research.google.com/github/edgresearch/pylib_networksampler/blob/master/notebooks/basic_tutorial.ipynb
+   :alt: Open In Colab
+
+* Or view the source file here: `notebooks/basic_tutorial.ipynb <https://github.com/edgresearch/pylib_networksampler/blob/master/notebooks/basic_tutorial.ipynb>`_
+
 Simple example
 --------------
 
@@ -144,6 +157,7 @@ Check the :ref:`License Page <license-label>` for details.
     :maxdepth: 1
     :hidden:
 
+    tutorial
     api
     howtocite
     license

@@ -1,4 +1,4 @@
-__version__ = "0.9.3"
+__version__ = "0.9.5"
 
 from .sampling import sa_sampling, node_random_sample, sa_sampling_twophases
 from .utils import generate_random_network, compute_shortest_length_paths_matrix
@@ -15,6 +15,7 @@ def info():
     import sys
     import numpy as np
     import networkx as nx
+    import scipy as sp
 
     print(f"NetworkSampler v{__version__}")
     print(f"Space-filling sampling designs for graphs")
@@ -28,3 +29,4 @@ def info():
     print(f"Python:     {sys.version.split()[0]}")
     print(f"NumPy:      {np.__version__}")
     print(f"NetworkX:   {nx.__version__}")
+    print(f"Scipy:      {sp.__version__}")

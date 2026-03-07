@@ -244,7 +244,7 @@ def node_random_sample(A:np.ndarray, k:int, measure="degree", random_seed=None):
     else:
         raise Exception("Not a valid centrality measure string or function")
 
-    G = nx.from_numpy_matrix(A)
+    G = nx.from_numpy_array(A)
 
     z = measureFunc(G)
     p = np.array(list(z.values()))
