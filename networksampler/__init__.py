@@ -1,9 +1,4 @@
-__version__ = "0.9.2"
-
-from .sampling import sa_sampling, node_random_sample, sa_sampling_twophases
-from .utils import generate_random_network, compute_shortest_length_paths_matrix
-
-__version__ = "0.9.2"
+__version__ = "0.9.3"
 
 from .sampling import sa_sampling, node_random_sample, sa_sampling_twophases
 from .utils import generate_random_network, compute_shortest_length_paths_matrix
